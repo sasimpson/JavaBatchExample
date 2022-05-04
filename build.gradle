@@ -1,0 +1,27 @@
+plugins {
+    id 'com.github.johnrengelman.shadow' version '7.1.2'
+    id 'application'
+    id 'java'
+}
+
+group 'com.ke5eo'
+version '1.0.2'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation "org.junit.jupiter:junit-jupiter-api:5.8.2"
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:5.8.2"
+    implementation 'com.alibaba:fastjson:2.0.1'
+    implementation 'org.xerial:sqlite-jdbc:3.36.0.3'
+}
+
+application {
+    mainClass = 'com.ke5eo.Main'
+}
+
+test {
+    useJUnitPlatform()
+}
